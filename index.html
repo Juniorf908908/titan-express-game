@@ -11,7 +11,7 @@
 <body>
     <div id="game-container">
         <!-- Start Screen -->
-        <div id="start-screen" class="screen">
+        <div id="startScreen" class="screen">
             <div class="logo">
                 <div class="logo-icon">⚡</div>
                 <h1>Tap Rush</h1>
@@ -22,16 +22,16 @@
                 <p>⏱️ 30 seconds on the clock</p>
                 <p>🔥 Build combos for bonus points</p>
             </div>
-            <button id="start-btn" class="btn btn-primary">
+            <button id="startButton" class="btn btn-primary" onclick="startGame()">
                 <span>▶</span> Play Now
             </button>
             <div class="high-score-display">
-                🏆 Best: <span id="best-score-start">0</span>
+                🏆 Best: <span id="highScore">0</span>
             </div>
         </div>
 
         <!-- Game Screen -->
-        <div id="game-screen" class="screen hidden">
+        <div id="gameScreen" class="screen hidden">
             <div class="hud">
                 <div class="hud-item">
                     <span class="hud-label">Score</span>
@@ -46,18 +46,18 @@
                     <span id="combo" class="hud-value">x1</span>
                 </div>
             </div>
-            <canvas id="game-canvas"></canvas>
+            <canvas id="gameCanvas"></canvas>
             <div id="combo-popup" class="combo-popup hidden"></div>
         </div>
 
         <!-- Game Over Screen -->
-        <div id="game-over-screen" class="screen hidden">
+        <div id="endScreen" class="screen hidden">
             <div class="result-card">
                 <div class="result-icon">🎯</div>
                 <h2>Game Over!</h2>
                 <div class="final-score">
                     <span class="score-label">Score</span>
-                    <span id="final-score" class="score-value">0</span>
+                    <span id="finalScore" class="score-value">0</span>
                 </div>
                 <div class="stats">
                     <div class="stat">
@@ -65,21 +65,17 @@
                         <span id="stat-hits" class="stat-value">0</span>
                     </div>
                     <div class="stat">
-                        <span class="stat-label">Missed</span>
-                        <span id="stat-missed" class="stat-value">0</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-label">Accuracy</span>
-                        <span id="stat-accuracy" class="stat-value">0%</span>
+                        <span class="stat-label">Best</span>
+                        <span id="bestScore" class="stat-value">0</span>
                     </div>
                 </div>
                 <div class="high-score-new hidden" id="new-best">🏆 New Best Score!</div>
             </div>
             <div class="btn-group">
-                <button id="restart-btn" class="btn btn-primary">
+                <button id="restart-btn" class="btn btn-primary" onclick="startGame()">
                     <span>↻</span> Play Again
                 </button>
-                <button id="share-btn" class="btn btn-secondary">
+                <button id="share-btn" class="btn btn-secondary" onclick="shareScore()">
                     <span>📤</span> Share Score
                 </button>
             </div>
