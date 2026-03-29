@@ -153,7 +153,7 @@ h1 {
 }
 
 /* Game Screen */
-#game-screen {
+#gameScreen {
  justify-content: flex-start;
  padding: 0;
 }
@@ -197,7 +197,7 @@ h1 {
  color: #f59e0b;
 }
 
-#game-canvas {
+#gameCanvas {
  flex: 1;
  width: 100%;
  touch-action: none;
@@ -224,7 +224,7 @@ h1 {
 }
 
 /* Game Over Screen */
-#game-over-screen {
+#endScreen {
  justify-content: flex-start;
  padding-top: 40px;
 }
