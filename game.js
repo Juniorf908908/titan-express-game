@@ -241,7 +241,7 @@ function goToStart() {
 // Share score
 function shareScore() {
     // Use Telegram share
-    const url = `https://t.me/share/url?url=https://example.com/tap-rush&text=I%20scored%20${score}%20in%20Tap%20Rush!%20Can%20you%20beat%20me?`;
+    const url = `https://t.me/share/url?url=https://juniorf908908.github.io/titan-express-game/&text=I%20scored%20${score}%20in%20Tap%20Rush!%20Can%20you%20beat%20me%3F%20%F0%9F%8E%AE`;
     tg?.openTelegramLink(url);
 }
 
